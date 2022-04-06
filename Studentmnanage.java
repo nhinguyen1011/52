@@ -11,14 +11,14 @@ public class Studentmnanage {
         System.out.println("enter student: ");
         int n = scanner.nextInt();
         students = new Student[n];
-        for (int i = 0; i <= n; i++) {
-            System.out.println("enter name of student" + i + 1 + ": ");
+        for (int i = 0; i < n; i++) {
+            System.out.println("enter name of student" + (i + 1) + ": ");
             String name = scanner.nextLine();
-            System.out.println("enter name of student" + i + 1 + ": ");
+            System.out.println("enter gpa of student" + (i + 1) + ": ");
             float gpa = scanner.nextFloat();
             students[i] = new Student();
-            students[i].getName();
-            students[i].getGpa();
+            students[i].setName(name);
+            students[i].setGpa(gpa);
         }
     }
 
