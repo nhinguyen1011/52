@@ -1,17 +1,26 @@
-package nhi;
-
 public class Student {
-
+    private double gpa;
     private String name;
-    private float gpa;
 
-    public Student(String name, float gpa) {
+    public Student() {
+        this.gpa = gpa;
         this.name = name;
+    }
+
+    public Student(double gpa) {
         this.gpa = gpa;
     }
 
-    public Student() {
+    public Student(String name) {
+        this.name = name;
+    }
 
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
     }
 
     public String getName() {
@@ -21,26 +30,19 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
-    public float getGpa() {
-        return gpa;
+    public void display(){
+        System.out.println("Ten: "+name+" diem: "+gpa);
     }
-
-    public void setGpa(float gpa) {
-        this.gpa = gpa;
+    public int Check(){
+        if (gpa >= 1.5)
+            return 1;
+        else
+            return 0;
     }
-    public boolean check(){
-
-        if (gpa >= 1.5) {
-            return true;
-        } else {
-            return  false;
-        }
-
+    public void Display(){
+        if ( Check() == 1)
+            System.out.println("pass");
+        else
+            System.out.println("fail");
     }
-    public void printf(){
-        System.out.println("student: "+name+"gpa: "+gpa);
-    }
-
-
 }
