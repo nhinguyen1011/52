@@ -1,24 +1,15 @@
-package nhi;
-
-public class Bai52 {
+public class TestSt {
     public static void main(String[] args) {
         Student student = new Student();
-        boolean checkgpa = student.check();
-        if (checkgpa == true) {
-            System.out.println("pass");
-        } else {
-            System.out.println("fail");
-        }
-        Studentmnanage studentmnanage=new Studentmnanage();
-        int svpass= studentmnanage.countpass();
+        student.Display();
+        StudentManagement studentManagement=new StudentManagement();
+        int svpass= studentManagement.Cpass();
         System.out.println("student pass: "+svpass);
-        Student maxstudent=studentmnanage.findmax();
+        Student maxstudent = studentManagement.Sinhviendiemcao();
         System.out.println("student has gpa max in class: ");
-        maxstudent.printf();
-        Student minstudent=studentmnanage.findmin();
+        maxstudent.display();
+        Student minstudent = studentManagement.Sinhviendiemthap();
         System.out.println("student has gpa min in class: ");
-        minstudent.printf();
+        minstudent.display();
     }
-
-
 }
